@@ -38,14 +38,13 @@ const Form = () => {
     <div className="Form">
       <div className="Form_container">
         <div className="header flex justify-center align-middle text-[25px]">
-          <h1 >{FormHeader[state.Page]}</h1>
+          <h1>{FormHeader[state.Page]}</h1>
         </div>
         <div className="body m-5 p-5 flex justify-center align-middle ">
           {PageComponents()}
         </div>
         <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
           <span>
-            {" "}
             <button
               disabled={state.Page == 0}
               className="w-2 h-2"
@@ -56,7 +55,6 @@ const Form = () => {
             </button>
           </span>
           <span>
-          
             <button
               disabled={state.Page == FormHeader.length - 1}
               onClick={NextPage}

@@ -1,7 +1,9 @@
 import React from "react";
 
 const Obligations = () => {
-  return <div></div>;
+  return <div>
+    
+  </div>;
 };
 
 export default Obligations;

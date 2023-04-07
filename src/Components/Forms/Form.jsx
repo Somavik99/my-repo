@@ -6,6 +6,7 @@ import Personal from "../Personal/Personal";
 import Terms from "../Terms/Terms";
 import Address from "../Address/Address";
 import Obligations from "../Obligations/Obligations";
+import "./Form.css";
 
 const Form = () => {
   const { state, dispatch } = useContext(FormContext);
@@ -40,14 +41,14 @@ const Form = () => {
         <div className="header flex justify-center align-middle text-[25px]">
           <h1>{FormHeader[state.Page]}</h1>
         </div>
-        <div className="body m-5 p-5 flex justify-center align-middle ">
+        <div className="body mx-[10em] my-14 ml-[41.2%] p-[8em] w-80  flex justify-center align-middle border-[2px] rounded-lg border-slate-500/80">
           {PageComponents()}
         </div>
         <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
           <span>
             <button
               disabled={state.Page == 0}
-              className="w-2 h-2"
+              className="NxtBtn w-2 h-2 text-[20px]"
               onClick={PrevPage}
             >
               <ArrowLeftIcon className="w-5 h-5" />

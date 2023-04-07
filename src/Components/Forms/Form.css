@@ -1,0 +1,13 @@
+.body {
+  transition: 0.21s ease;
+}
+
+.body:hover {
+  transform: scale(1.1);
+  border-color: rgba(51, 143, 255, 0.802);
+  box-shadow: -0.8rem 0.8rem 0.8rem 1rem  rgba(53, 48, 48, 0.242);
+}
+
+.NxtBtn{
+    text-shadow: 0.4rem 0.4rem 0.4rem rgb(53, 48, 48);
+}

@@ -9,18 +9,6 @@ import Obligations from "../Obligations/Obligations";
 
 const Form = () => {
   const { state, dispatch } = useContext(FormContext);
-  const PageComponents = [];
-  PageComponents.push(<SignUp />);
-  PageComponents.push(<Personal />);
-  PageComponents.push(<Address />);
-  PageComponents.push(<Terms />);
-  PageComponents.push(<Obligations />);
-
-  console.log(PageComponents);
-
-  useEffect(()=>{
-    PageComponents;
-  },[])
 
   const FormHeader = [
     "Sign Up",
@@ -31,33 +19,52 @@ const Form = () => {
   ];
   const NextPage = () => dispatch({ type: "NEXT" });
   const PrevPage = () => dispatch({ type: "PREV" });
+
+  const PageComponents = () => {
+    if (state.Page === 0) {
+      return <SignUp />;
+    } else if (state.Page === 1) {
+      return <Personal />;
+    } else if (state.Page === 2) {
+      return <Address />;
+    } else if (state.Page === 3) {
+      return <Terms />;
+    } else if (state.Page === 4) {
+      return <Obligations />;
+    }
+  };
+
   return (
     <div className="Form">
       <div className="Form_container">
-        <div className="header">
-          <h1>{FormHeader[state.Page]}</h1>
+        <div className="header flex justify-center align-middle text-[25px]">
+          <h1 >{FormHeader[state.Page]}</h1>
         </div>
-        <div className="body m-5 p-5">
+        <div className="body m-5 p-5 flex justify-center align-middle ">
+          {PageComponents()}
+        </div>
+        <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
+          <span>
+            {" "}
+            <button
+              disabled={state.Page == 0}
+              className="w-2 h-2"
+              onClick={PrevPage}
+            >
+              <ArrowLeftIcon className="w-5 h-5" />
+              Back
+            </button>
+          </span>
+          <span>
           
-        </div>
-        <div className="footer">
-          <button
-            disabled={state.Page == 0}
-            className="w-2 h-2"
-            onClick={PrevPage}
-          >
-            <ArrowLeftIcon className="w-5 h-5" />
-            Back
-          </button>
-        </div>
-        <div>
-          <button
-            disabled={state.Page == FormHeader.length - 1}
-            onClick={NextPage}
-          >
-            <ArrowRightIcon className="w-5 h-5" />
-            Next
-          </button>
+            <button
+              disabled={state.Page == FormHeader.length - 1}
+              onClick={NextPage}
+            >
+              <ArrowRightIcon className="w-5 h-5" />
+              Next
+            </button>
+          </span>
         </div>
       </div>
     </div>

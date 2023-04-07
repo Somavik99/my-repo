@@ -1,9 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FormContext } from "../Context/FormContextProvider";
+import SignUp from "../SignUp/SignUp";
+import Personal from "../Personal/Personal";
+import Terms from "../Terms/Terms";
+import Address from "../Address/Address";
+import Obligations from "../Obligations/Obligations";
 
 const Form = () => {
-  const { Page, state, dispatch } = useContext(FormContext);
+  const { state, dispatch } = useContext(FormContext);
+  const PageComponents = [];
+  PageComponents.push(<SignUp />);
+  PageComponents.push(<Personal />);
+  PageComponents.push(<Address />);
+  PageComponents.push(<Terms />);
+  PageComponents.push(<Obligations />);
+
+  console.log(PageComponents);
+
+  useEffect(()=>{
+    PageComponents;
+  },[])
 
   const FormHeader = [
     "Sign Up",
@@ -21,24 +38,7 @@ const Form = () => {
           <h1>{FormHeader[state.Page]}</h1>
         </div>
         <div className="body m-5 p-5">
-          <div>
-            <input
-              type="text"
-              className="outline-0 border-l-[5px]  border-r-[5px]  border-t-2 border-b-2 m-2 p-2 rounded-lg"
-            />
-          </div>
-          <div>
-            <input
-              type="email"
-              className="outline-0 border-l-[5px]  border-r-[5px]  border-t-2 border-b-2 m-2 p-2 rounded-lg "
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              className="outline-0 border-l-[5px]  border-r-[5px] border-t-2 border-b-2 m-2 p-2 rounded-lg"
-            />
-          </div>
+          
         </div>
         <div className="footer">
           <button

@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { HiOutlineUser } from "react-icons/hi";
 import { FormContext } from "../Context/FormContextProvider";
 import SignUp from "../SignUp/SignUp";
 import Personal from "../Personal/Personal";
@@ -7,7 +8,6 @@ import Terms from "../Terms/Terms";
 import Address from "../Address/Address";
 import Obligations from "../Obligations/Obligations";
 import "./Form.css";
-
 
 const Form = () => {
   const { state, dispatch } = useContext(FormContext);
@@ -42,14 +42,17 @@ const Form = () => {
         <div className="header flex justify-center align-middle text-[25px]">
           <h1>{FormHeader[state.Page]}</h1>
         </div>
-        <div className="body mx-[10em] my-14 ml-[43%] p-[8em] w-80 h-90  flex justify-center align-middle border-[2px] rounded-lg border-slate-500/80">
-          <img src="/profile.svg" alt="profile" className="h-10 w-12" />
+
+        <div className="mx-[8em] p-[8em] flex justify-center items-center">
+          <p className="icon mx-[6em] my-[5em] border-black border-2 w-90 h-90 rounded-[50%]">
+            <HiOutlineUser className="m-5  w-[80px] h-[80px] rounded-[50%] bg-transparent" />
+          </p>
           {PageComponents()}
         </div>
         <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
           <span>
             <button
-              disabled={state.Page == 0}
+              hidden={state.Page == 0}
               className="PrevBtn w-[64px]
               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
               onClick={PrevPage}
@@ -60,7 +63,7 @@ const Form = () => {
           </span>
           <span>
             <button
-              disabled={state.Page == FormHeader.length - 1}
+              hidden={state.Page == FormHeader.length - 1}
               onClick={NextPage}
               className="NxtBtn w-[64px]
                h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"

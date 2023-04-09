@@ -8,8 +8,7 @@ const SignUp = () => {
   }, []);
   return (
     <Bounce cascade>
-     
-      <div className="m-[10px]">
+      <div>
         <div>
           <input
             type="text"

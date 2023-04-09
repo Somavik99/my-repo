@@ -1,5 +1,7 @@
 .body {
+  height: 28em;
   transition: 0.21s ease;
+  box-shadow: -0.3rem 0.3rem 0.3rem 0.5rem  rgba(53, 48, 48, 0.242);
 }
 
 .body:hover {
@@ -9,5 +11,25 @@
 }
 
 .NxtBtn{
-    text-shadow: 0.4rem 0.4rem 0.4rem rgb(53, 48, 48);
+  background-image: linear-gradient(to right top, #26e77a, #22e582, #21e489, #22e290, #25e096);
+  color: whitesmoke;
+  position: absolute;
+}
+
+.NxtBtn:disabled{
+  background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
+ border-color: rgb(192, 146, 235);
+ color: rgb(232, 240, 244);
+}
+
+.PrevBtn{
+  background-image: linear-gradient(to right top, #26e77a, #22e582, #21e489, #22e290, #25e096);
+  color: whitesmoke;
+  
+}
+
+.PrevBtn:disabled{
+  background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
+  border-color: rgb(192, 146, 235);
+  color: rgb(232, 240, 244);
 }

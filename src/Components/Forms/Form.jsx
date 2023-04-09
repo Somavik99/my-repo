@@ -8,6 +8,7 @@ import Address from "../Address/Address";
 import Obligations from "../Obligations/Obligations";
 import "./Form.css";
 
+
 const Form = () => {
   const { state, dispatch } = useContext(FormContext);
 
@@ -41,17 +42,19 @@ const Form = () => {
         <div className="header flex justify-center align-middle text-[25px]">
           <h1>{FormHeader[state.Page]}</h1>
         </div>
-        <div className="body mx-[10em] my-14 ml-[41.2%] p-[8em] w-80  flex justify-center align-middle border-[2px] rounded-lg border-slate-500/80">
+        <div className="body mx-[10em] my-14 ml-[43%] p-[8em] w-80 h-90  flex justify-center align-middle border-[2px] rounded-lg border-slate-500/80">
+          <img src="/profile.svg" alt="profile" className="h-10 w-12" />
           {PageComponents()}
         </div>
         <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
           <span>
             <button
               disabled={state.Page == 0}
-              className="NxtBtn w-2 h-2 text-[20px]"
+              className="PrevBtn w-[64px]
+              h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
               onClick={PrevPage}
             >
-              <ArrowLeftIcon className="w-5 h-5" />
+              <ArrowLeftIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.2] bg-transparent items-center" />
               Back
             </button>
           </span>
@@ -59,8 +62,10 @@ const Form = () => {
             <button
               disabled={state.Page == FormHeader.length - 1}
               onClick={NextPage}
+              className="NxtBtn w-[64px]
+               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
             >
-              <ArrowRightIcon className="w-5 h-5" />
+              <ArrowRightIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.2] bg-transparent items-center" />
               Next
             </button>
           </span>

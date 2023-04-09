@@ -52,7 +52,7 @@ const Form = () => {
         <div className="footer flex justify-center align-middle gap-[18rem] m-5 p-5">
           <span>
             <button
-              hidden={state.Page == 0}
+              hidden={state.Page == 0 || state.Page === FormHeader.length - 1}
               className="PrevBtn w-[64px]
               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
               onClick={PrevPage}

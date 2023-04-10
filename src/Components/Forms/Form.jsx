@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowUturnLeftIcon, ArrowUturnRightIcon } from "@heroicons/react/20/solid";
 import { HiOutlineUser } from "react-icons/hi";
 import { FormContext } from "../Context/FormContextProvider";
 import SignUp from "../SignUp/SignUp";
@@ -54,10 +54,10 @@ const Form = () => {
             <button
               hidden={state.Page == 0 || state.Page === FormHeader.length - 1}
               className="PrevBtn w-[64px]
-              h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
+              h-[64px] text-[20px] border-y-[3px] border-x-[1.8px]  rounded-2xl hover:shadow-2xl "
               onClick={PrevPage}
             >
-              <ArrowLeftIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.2] bg-transparent items-center" />
+              <ArrowUturnLeftIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.5] bg-transparent items-center hover:text-gray-500" />
               Back
             </button>
           </span>
@@ -66,9 +66,9 @@ const Form = () => {
               hidden={state.Page == FormHeader.length - 1}
               onClick={NextPage}
               className="NxtBtn w-[64px]
-               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px] border-slate-500 rounded-2xl hover:shadow-2xl"
+               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px]  rounded-2xl hover:shadow-2xl"
             >
-              <ArrowRightIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.2] bg-transparent items-center" />
+              <ArrowUturnRightIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.5] bg-transparent items-center hover:text-gray-500" />
               Next
             </button>
           </span>

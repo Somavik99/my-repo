@@ -8,8 +8,16 @@ import { Fade } from "react-awesome-reveal";
 function App() {
   return (
     <>
-      <Fade damping={1e-1} delay={2e3} className="text-3xl font-bold flex justify-center align-middle m-10">Registration Form</Fade>
-      <FormContextProvider><Form /></FormContextProvider>
+      <Fade
+        damping={1e-1}
+        delay={2e3}
+        className="text-3xl font-bold flex justify-center align-middle m-10"
+      >
+        Registration Form
+      </Fade>
+      <FormContextProvider>
+        <Form />
+      </FormContextProvider>
     </>
   );
 }

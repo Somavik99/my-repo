@@ -1,13 +1,14 @@
 import React from "react";
+import "./Personal.css"
 
 const Personal = () => {
   return (
-    <div className="">
+    <div className="p-8">
       <div>
         <p><label htmlFor="Edu">Education</label></p>
         <input type="text" name="Edu" placeholder="Enter Degree..." />
       </div>
-        <div className="date m-4 p-8 flex-initial">
+        <div className="date my-4 py-2 flex-initial">
           <p><label htmlFor="dob">Date Of Graduating</label></p>
         <input type="date" name="" id="" />
       </div>

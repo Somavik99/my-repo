@@ -1,24 +1,27 @@
 
 
 .NxtBtn{
-  background-image: linear-gradient(to right top, #26e77a, #22e582, #21e489, #22e290, #25e096);
-  color: whitesmoke;
+  background-image: radial-gradient(circle, #f2f8f88c, #f2f8f8aa, #ebf8f8, #e9f8f8ad, #ecfbfad8);
+  color: rgb(50, 48, 48);
   position: absolute;
+  font-weight: bolder;
 }
 
-.NxtBtn:disabled{
+.NxtBtn:hover{
   background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
  border-color: rgb(192, 146, 235);
  color: rgb(232, 240, 244);
 }
 
 .PrevBtn{
-  background-image: linear-gradient(to right top, #26e77a, #22e582, #21e489, #22e290, #25e096);
-  color: whitesmoke;
+  background-image: radial-gradient(circle, #f2f8f88c, #f2f8f8aa, #ebf8f8, #e9f8f8ad, #ecfbfad8);
+  color: rgb(96, 32, 32);
+  font-weight: bolder;
+
   
 }
 
-.PrevBtn:disabled{
+.PrevBtn:hover{
   background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
   border-color: rgb(192, 146, 235);
   color: rgb(232, 240, 244);

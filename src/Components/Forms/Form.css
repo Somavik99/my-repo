@@ -1,20 +1,21 @@
 
 
 .NxtBtn{
-  background-image: radial-gradient(circle, #f2f8f88c, #f2f8f8aa, #ebf8f8, #e9f8f8ad, #ecfbfad8);
+  background-image: radial-gradient(circle, #fafafa8c, #fefefeaa, #ffffff, #ffffffad, #ffffffd8);
   color: rgb(50, 48, 48);
   position: absolute;
   font-weight: bolder;
 }
 
 .NxtBtn:hover{
+  transition: 0.51s ease-out;
   background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
  border-color: rgb(192, 146, 235);
- color: rgb(232, 240, 244);
+ color: rgb(255, 255, 255);
 }
 
 .PrevBtn{
-  background-image: radial-gradient(circle, #f2f8f88c, #f2f8f8aa, #ebf8f8, #e9f8f8ad, #ecfbfad8);
+  background-image: radial-gradient(circle, #fafafa8c, #fefefeaa, #ffffff, #ffffffad, #ffffffd8);
   color: rgb(96, 32, 32);
   font-weight: bolder;
 
@@ -22,9 +23,10 @@
 }
 
 .PrevBtn:hover{
+  transition: 0.51s ease-out;
   background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
   border-color: rgb(192, 146, 235);
-  color: rgb(232, 240, 244);
+  color: rgb(255, 255, 255);
 }
 
 .icon{

@@ -1,13 +1,14 @@
-import React, { createContext } from 'react'
+import React, { createContext ,useState} from "react";
 
+const AllPageContext = createContext();
+const AllContextProvider = ({ children }) => {
+  const [FromData,setFromData] = useState({
+    user:"",
+    email:"",
+    pass:"",
+    cPass:"",
+  })
+  return <AllPageContext.Provider>{children}</AllPageContext.Provider>;
+};
 
-const AllPageContext = createContext()
-const AllContextProvider = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export { AllContextProvider}
+export { AllContextProvider ,AllPageContext};

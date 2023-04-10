@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { ArrowUturnLeftIcon, ArrowUturnRightIcon } from "@heroicons/react/20/solid";
-import { HiOutlineUser } from "react-icons/hi";
+import { CiUser } from "react-icons/ci";
 import { FormContext } from "../Context/FormContextProvider";
 import SignUp from "../SignUp/SignUp";
 import Personal from "../Personal/Personal";
 import Terms from "../Terms/Terms";
-import Address from "../Address/Address";
+import Plans from "../Plans/Plans";
 import Obligations from "../Obligations/Obligations";
 import "./Form.css";
 
@@ -15,7 +14,7 @@ const Form = () => {
   const FormHeader = [
     "Sign Up",
     "Personal Details",
-    "Address",
+    "Plans",
     "Terms & conditions",
     "Obligations",
   ];
@@ -28,7 +27,7 @@ const Form = () => {
     } else if (state.Page === 1) {
       return <Personal />;
     } else if (state.Page === 2) {
-      return <Address />;
+      return <Plans />;
     } else if (state.Page === 3) {
       return <Terms />;
     } else if (state.Page === 4) {
@@ -45,7 +44,7 @@ const Form = () => {
 
         <div className="mx-[8em] p-[8em] flex justify-center items-center">
           <p className="icon mx-[6em] my-[5em] border-black border-2 w-90 h-90 rounded-[50%]">
-            <HiOutlineUser className="m-5  w-[80px] h-[80px] rounded-[50%] bg-transparent" />
+            <CiUser className="m-5  w-[80px] h-[80px] rounded-[50%] bg-transparent" />
           </p>
           {PageComponents()}
         </div>
@@ -53,11 +52,10 @@ const Form = () => {
           <span>
             <button
               hidden={state.Page == 0 || state.Page === FormHeader.length - 1}
-              className="PrevBtn w-[64px]
-              h-[64px] text-[20px] border-y-[3px] border-x-[1.8px]  rounded-2xl hover:shadow-2xl "
+              className="NxtBtn w-[84px]
+               h-[45px] text-[20px] border-y-[1.8px] border-x-[1.8px]  rounded-xl hover:shadow-2xl hover:shadow-gray-700"
               onClick={PrevPage}
             >
-              <ArrowUturnLeftIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.5] bg-transparent items-center hover:text-gray-500" />
               Back
             </button>
           </span>
@@ -65,11 +63,10 @@ const Form = () => {
             <button
               hidden={state.Page == FormHeader.length - 1}
               onClick={NextPage}
-              className="NxtBtn w-[64px]
-               h-[64px] text-[20px] border-y-[3px] border-x-[1.8px]  rounded-2xl hover:shadow-2xl"
+              className="NxtBtn w-[84px]
+               h-[45px] text-[20px] border-y-[1.8px] border-x-[1.8px]  rounded-xl hover:shadow-2xl hover:shadow-gray-700"
             >
-              <ArrowUturnRightIcon className="w-6 h-6 ml-5 transition-all hover:scale-[1.5] bg-transparent items-center hover:text-gray-500" />
-              Next
+             Next
             </button>
           </span>
         </div>

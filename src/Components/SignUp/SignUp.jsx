@@ -13,6 +13,7 @@ const SignUp = () => {
           <input
             type="text"
             ref={inputRef}
+            name="user"
             className="name outline-0 border-l-[5px] border-gray-800/80 hover:border-blue-900/80 border-r-[5px]  border-y-[1px] m-2 p-2 rounded-lg"
             placeholder="name..."
           />
@@ -20,12 +21,14 @@ const SignUp = () => {
         <div>
           <input
             type="email"
+            name="email"
             className="email outline-0 border-l-[5px]  border-gray-800/80 hover:border-blue-900/80 border-r-[5px]  border-y-[1px] m-2 p-2 rounded-lg "
             placeholder="Email..."
           />
         </div>
         <div>
           <input
+          name="pass"
             type="password"
             className="pass outline-0 border-l-[5px] border-gray-800/80 hover:border-blue-900/80 border-r-[5px]  border-y-[1px] m-2 p-2 rounded-lg"
             placeholder="Password..."
@@ -33,6 +36,7 @@ const SignUp = () => {
         </div>
         <div>
           <input
+          name="cPass"
             type="password"
             className="cPass outline-0 border-l-[5px]  border-gray-800/80 hover:border-blue-900/80 border-r-[5px]  border-y-[1px] m-2 p-2 rounded-lg"
             placeholder="Confirm Password..."

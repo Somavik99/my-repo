@@ -1,0 +1,11 @@
+.Blog{
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(92, 92, 92, 0.308);
+    transition: 0.8s ease;
+}
+
+.Blog:hover{
+    transform: scale(1);
+    box-shadow: none;
+    border-style:inherit;
+    /* border-image:  linear-gradient(to right top, #00fffe, #00fff9, #00fff4, #00ffee, #00ffe8); */
+}

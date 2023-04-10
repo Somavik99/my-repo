@@ -1,12 +1,13 @@
-import React from 'react'
-
+import React from "react";
 
 const Plans = () => {
   return (
-    <div itemType='switch'>
-      
+    <div>
+      <div>
+        <input type="switch" />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Plans
+export default Plans;

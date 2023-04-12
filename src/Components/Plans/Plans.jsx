@@ -8,39 +8,36 @@ const Plans = () => {
   const [Toggled, setToggled] = useState(false);
 
   const isToggled = () => {
-    return setToggled(() => {
-      !Toggled;
-      true;
-    });
+    return setToggled((Toggled) => !Toggled);
   };
-
-  useEffect(() => {
-    console.log(PlanData);
+  console.log(PlanData);
+ useEffect(() => {
+    PlanData;
   }, []);
 
   return (
     <div>
       <div className="SwitchCase">
-        {PlanData.map((data, index) => {
+        {PlanData?.map((data, index) => {
           return (
             <div key={index}>
-              {isToggled === Toggled ? (
+              {! Toggled ? (
                 <StudentCard
                   StudentId={data.id[0]}
-                  StudentImage={data.image[0]}
+               
                   StudentInfo={data.description[0]}
                   StudentAmount={data.amount[0]}
                   StudentHeader={data.PlanName[0]}
                 />
-              ) : (
+              ) : Toggled?(
                 <ProfessionalCard
                   ProfessionalId={data.id[1]}
-                  ProfessionalImage={data.image[1]}
+               
                   ProfessionalInfo={data.description[1]}
                   ProfessionalAmount={data.amount[1]}
                   ProfessionalHeader={data.PlanName[1]}
                 />
-              )}
+              ): !Toggled}
             </div>
           );
         })}

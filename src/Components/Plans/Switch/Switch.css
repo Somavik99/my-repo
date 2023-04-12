@@ -1,0 +1,65 @@
+.Switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.Switch input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.Switch_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to left,
+    #7ee3ff,
+    #8fe8f7,
+    #a2edf0,
+    #b5f1eb,
+    #c8f4e9
+  );
+  transition: 0.5s ease;
+}
+
+.Switch_slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: whitesmoke;
+
+  transition: 0.5s ease;
+}
+
+input:checked + .Switch_slider {
+  background-image: linear-gradient(
+    to right,
+    #62ff98,
+    #6effb4,
+    #83fecb,
+    #9cfbdc,
+    #b9f8e8
+  );
+}
+
+input:checked + .Switch_slider::before {
+  transform: translateX(26px);
+}
+
+.Switch_slider.rounded{
+    border-radius: 50px;
+}
+
+.Switch_slider.rounded::before{
+    border-radius: 50%;
+}

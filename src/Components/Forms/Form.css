@@ -5,11 +5,12 @@
   color: rgb(50, 48, 48);
   position: absolute;
   font-weight: bolder;
+  transition: 0.4s ease-out;
 }
 
 .NxtBtn:hover{
-  transition: 0.51s ease-out;
-  background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
+  transform: scale(1);
+  background-image:  linear-gradient(to right, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
  border-color: rgb(192, 146, 235);
  color: rgb(255, 255, 255);
 }
@@ -18,13 +19,13 @@
   background-image: radial-gradient(circle, #fafafa8c, #fefefeaa, #ffffff, #ffffffad, #ffffffd8);
   color: rgb(96, 32, 32);
   font-weight: bolder;
-
+  transition: 0.4s ease-out;
   
 }
 
 .PrevBtn:hover{
-  transition: 0.51s ease-out;
-  background-image: linear-gradient(to right top, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
+  transform: scale(1);
+  background-image: linear-gradient(to left, #9099a8, #98a3b4, #9fadc0, #a7b8cc, #aec2d8);
   border-color: rgb(192, 146, 235);
   color: rgb(255, 255, 255);
 }

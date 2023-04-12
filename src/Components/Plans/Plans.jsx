@@ -1,13 +1,12 @@
 import React from "react";
+import Switch from "./Switch/Switch";
 
 const Plans = () => {
   return (
     <div>
-      <div>
-        <input type="switch" />
-      </div>
+      <Switch />
     </div>
   );
-}
+};
 
 export default Plans;

@@ -66,7 +66,7 @@ const Form = () => {
               className="NxtBtn w-[84px]
                h-[45px] text-[20px] border-y-[1.8px] border-x-[1.8px]  rounded-xl hover:shadow-2xl hover:shadow-gray-700"
             >
-             Next
+             Next 
             </button>
           </span>
         </div>

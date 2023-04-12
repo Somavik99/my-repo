@@ -2,9 +2,9 @@ import React from "react";
 import "./Switch.css";
 import cx from "classnames";
 
-const Switch = ({ rounded = false, isToggled, onToggle }) => {
+const Switch = ({ rounded=true , isToggled, onToggle }) => {
   const Switch_sliderCX = cx("Switch_slider", {
-    rounded: !rounded,
+    rounded:rounded
   });
 
   return (
@@ -13,7 +13,7 @@ const Switch = ({ rounded = false, isToggled, onToggle }) => {
         <input type="checkbox" checked={isToggled} onChange={onToggle} />
         <span className={Switch_sliderCX} />
       </label>
-    </div>
+    </div>  
   );
 };
 

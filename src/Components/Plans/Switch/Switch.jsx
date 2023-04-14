@@ -8,8 +8,8 @@ const Switch = ({ rounded=true , isToggled, onToggle }) => {
   });
 
   return (
-    <div>
-      <label className="Switch">
+    <div className="rounded-full  w-[4em]  my-[4em]" >
+      <label className="Switch rounded-full">
         <input type="checkbox" onClick={isToggled} checked={onToggle} />
         <span className={Switch_sliderCX} />
       </label>

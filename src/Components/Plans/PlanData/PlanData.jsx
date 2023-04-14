@@ -1,7 +1,7 @@
 export const PlanData = [
   {
     id: "1",
-    PlanName: "Normal Plan",
+    PlanName: "Student Plan",
     type:"Student",
     description:
       "This plan is a student oriented plan. It has the access to all kinds of courses for students.",

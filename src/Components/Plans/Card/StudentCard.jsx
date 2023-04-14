@@ -5,6 +5,7 @@ const StudentCard = ({
   StudentInfo,
   StudentAmount,
   StudentHeader,
+  studentType
 }) => {
   return (
     <div className="h-32 w-48 border-black border-2">
@@ -18,6 +19,7 @@ const StudentCard = ({
       <p>{StudentHeader}</p>
       <p className="PlanInfo_container">{StudentInfo}</p>
       <span>{StudentAmount}</span>
+      <p>Plan type: {studentType}</p>
     </div>
   );
 };
